@@ -5,9 +5,15 @@ import matplotlib.pyplot as plt
 import matplotlib
 #dummy change; remove this
 
+from Utils import  showModulePath
+
+showModulePath(VoipMs)
+#raise AssertionError("Unexpected value of 'distance'!", 11)
+raise Exception('bad thing happened')
 
 
-client = VoipMs(, )
+#Load the JSON file with pwrd
+#client = VoipMs(, )
 status=client.accounts.get.registration_status('136817_CELL3')
 print(status)
 
