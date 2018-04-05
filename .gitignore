@@ -6,3 +6,6 @@
 /.idea/vcs.xml
 /.idea/workspace.xml
 /uData.json
+/VoipMS_Logfile - Copy.csv
+/__pycache__/*.pyc
+/MYPLOT.png

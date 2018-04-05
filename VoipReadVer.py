@@ -8,8 +8,10 @@ import matplotlib
 #from Utils import  showModulePath
 import Utils
 
-filedata=Utils.getPWFile()
+def sendSMS(src, dst, msg):
+    client.dids.send.sms(src,dst, msg)
 
+filedata=Utils.getPWFile()
 Utils.showModulePath(VoipMs)
 #raise AssertionError("Unexpected value of 'distance'!", 11)
 #raise Exception('bad thing happened')
@@ -21,8 +23,9 @@ client = VoipMs(filedata['un'], filedata['pw'] )
 status=client.accounts.get.registration_status('136817_CELL3')
 print(status)
 
-
-
+print('now sending sms')
+sendSMS(filedata['DID'], filedata['DID'], 'AHOY DUDE')
+import DataTest
 #from voipms import VoipMs
 #client = VoipMs('', '')
 a=client.accounts.get.registration_status('136817_CELL3')
@@ -57,7 +60,12 @@ while 1:
     x2 = [datetime.strptime(elem, '%Y-%m-%d, %H:%M:%S') for elem in TIME_ARRAY]
     dates=matplotlib.dates.date2num(x2)
 
-    status=client.accounts.get.registration_status('136817_CELL3')
+    try:
+        status=client.accounts.get.registration_status('136817_CELL3')
+    except:
+        print('Iteration skipped! could not log into voip.ms..retrying')
+        continue
+
     #print('cell phone registered? ' + status['registered'])
     registerstatus= int(status['registered']=='yes')
     REGISTRATION_ARRAY.append(registerstatus)
