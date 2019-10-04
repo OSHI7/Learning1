@@ -5,6 +5,7 @@ list=['happy', 'sad', 'quick', 'slow']
 #     print(item)
 
 i=iter(list)
-print(i())
+print(*i)
+# print(i())
 print(i)
 
