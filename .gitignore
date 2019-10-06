@@ -9,3 +9,6 @@
 /VoipMS_Logfile - Copy.csv
 /__pycache__/*.pyc
 /MYPLOT.png
+/venv
+/__pycache__
+/.idea
