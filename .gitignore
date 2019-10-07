@@ -9,6 +9,6 @@
 /VoipMS_Logfile - Copy.csv
 /__pycache__/*.pyc
 /MYPLOT.png
-/.idea/inspectionProfiles/profiles_settings.xml
-/.vscode/launch.json
-/.vscode/settings.json
+/venv
+/__pycache__
+/.idea
