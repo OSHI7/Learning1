@@ -33,8 +33,9 @@ arr1d
 
 print("Graphical Representation : \n", np.square(x)) 
   
-plt.title("blue : with square\nred : without square") 
+plt.title("blrreue : with square\nred : without square")
 plt.plot(x, np.square(x)) 
   
 plt.plot(x, x, color = 'red') 
-plt.show() 
+plt.show()
+print(i)
