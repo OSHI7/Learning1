@@ -5,6 +5,7 @@ list=['happy', 'sad', 'quick', 'slow']
 #     print(item)
 import numpy as np
 
+#%%  cell
 list=['happy', 'sad', 'quick', 'slow']
 
 
@@ -17,7 +18,7 @@ print(i)
 
 import matplotlib.pyplot as plt 
 
-
+#%% cell2
 
 x = np.array([2,3,1,0])
 y=x^2
