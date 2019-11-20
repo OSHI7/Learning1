@@ -12,3 +12,4 @@
 /venv
 /__pycache__
 /.idea
+/scipy.optimize.curve_fit Example.zip
