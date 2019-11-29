@@ -36,7 +36,28 @@ print("Graphical Representation : \n", np.square(x))
 plt.title("blrreue : with square\nred : without square")
 plt.plot(x, np.square(x)) 
   
-plt.plot(x, x, color = 'red') 
+plt.plot(x, x, color = 'red')
+
+pos2 = []
+def onclick(event):
+    pos2.append([event.xdata,event.ydata])
+
 plt.show()
 print(i)
 print('all done, local change from Joshua-Pc')
+
+
+import matplotlib.pylab as plt
+import numpy as np
+
+f,a = plt.subplots()
+x = np.linspace(1,10,100)
+y = np.sin(x)
+a.plot(x,y)
+
+pos = []
+def onclick(event):
+    pos.append([event.xdata,event.ydata])
+
+f.canvas.mpl_connect('button_press_event', onclick)
+f.show()
