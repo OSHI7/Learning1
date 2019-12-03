@@ -115,3 +115,8 @@ def sendMail(to, subject, text, files=[]):
 
 
 #showModulePath(os)
+
+if __name__=='__main__':
+    print('you got loaded suckeer')
+else:
+    print('notpe, name was %s', __name__)
