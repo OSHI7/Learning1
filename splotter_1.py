@@ -1,14 +1,18 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matlablib import *
+
 
 ## % load me file
-fname_1=r"D:\Works\Python\Learning1\70dB-2sec.csv"
-fname_2=r'D:\Works\Python\Learning1\70dB-5sec.csv'
+# %timeit
+# fname_1=r"D:\Works\Python\Learning1\70dB-2sec.csv"
+# fname_2=r'D:\Works\Python\Learning1\70dB-5sec.csv'
+fname_1=r"70dB-2sec.csv"
+fname_2=r'70dB-5sec.csv'
 pd1=pd.read_csv(fname_1)
 pd2=pd.read_csv(fname_2)
 print('loaded')
-
 
 
 ##
@@ -43,3 +47,17 @@ plt.legend()
 
 plt.show()
 ##
+if 1:
+    print('hi dude')
+    fix=plt.figure()
+    plt.plot(x1, y1, label=("2s mean=" + str(round(mean_2s, 2))+ ", std=" + str(round(np.std(y1), 2))))
+    fix.show()
+    print('done')
+    # ref: https://stackoverflow.com/questions/7449585/how-do-you-set-the-absolute-position-of-figure-windows-with-matplotlib
+
+##
+if 0:
+    fig, ax = plt.subplots()
+    mngr = plt.get_current_fig_manager()
+    # to put it into the upper left corner for example:
+    mngr.window.setGeometry(50, 100, 640, 545)

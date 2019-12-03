@@ -99,7 +99,7 @@ def sendMail(to, subject, text, files=[]):
         part.set_payload( open(file,"rb").read() )
         encoders.encode_base64(part)
         part.add_header('Content-Disposition', 'attachment; filename="%s"'
-                       % os.path.basename(file))
+                        % os.path.basename(file))
         msg.attach(part)
 
     server = smtplib.SMTP('smtp.gmail.com:587')
@@ -113,10 +113,3 @@ def sendMail(to, subject, text, files=[]):
 
     server.quit()
 
-
-#showModulePath(os)
-
-if __name__=='__main__':
-    print('you got loaded suckeer')
-else:
-    print('notpe, name was %s', __name__)
