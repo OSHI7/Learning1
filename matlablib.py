@@ -23,3 +23,6 @@ def toc(tempBool=True):
 def tic():
     # Records a time in TicToc, marks the beginning of a time interval
     toc(False)
+
+def closefigures(plt):
+    a=[plt.close(x) for x in range(1,100)] #bit dumb..how can i cound total # of figures?
