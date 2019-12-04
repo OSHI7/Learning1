@@ -51,21 +51,35 @@ plt.legend()
 
 toc()
 
-
-
-plt.show()
+#plt.show()
+plt.show(block = False)
 ##
 if 1:
     print('hi dude')
     fix=plt.figure()
     plt.plot(x1, y1, label=("2s mean=" + str(round(mean_2s, 2))+ ", std=" + str(round(np.std(y1), 2))))
-    fix.show()
+    #fix.show()
+    plt.show(block=False)  # this is important to let code hit the breakpoints
     print('done')
     # ref: https://stackoverflow.com/questions/7449585/how-do-you-set-the-absolute-position-of-figure-windows-with-matplotlib
 
+print('hi')
 ##
 if 0:
     fig, ax = plt.subplots()
     mngr = plt.get_current_fig_manager()
     # to put it into the upper left corner for example:
     mngr.window.setGeometry(50, 100, 640, 545)
+
+## Matlab style plotting?
+fig=plt.figure();
+plt.plot(x1,y1, '-r');
+#fig.show(block=False)
+fig.canvas.draw()
+plt.pause(0.001)
+# closefigures(plt)
+
+
+##
+
+
