@@ -22,6 +22,7 @@ tic()
 # [plt.close(x) for x in range(1,11)]
 
 closefigures(plt) # call my matplotlib to kill all open figures
+# Nonense comment
 
 ##
 # [ x**2 for x in range(1,11) ]
