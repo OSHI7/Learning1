@@ -16,6 +16,20 @@ pd2=pd.read_csv(fname_2)
 print('loaded')
 toc()
 
+## Check if all variables are cleared?
+# SETTINGS > BUILD,EXECUTION,DEPLOYMENT > CONSOLE > "Use existing console for "Run with Python Console"'
+# Idea;  if that setting re-initializes all variables, or if it continues with the same namespace
+# Conclusion: It re-initializes all the parameters
+
+if 'ctr' in locals().keys(): # check if ctr is a variable in locals
+    ctr=float(ctr+1)
+    print(f"incremented counter {ctr:3.2f}") # note format specifiers
+
+else:
+    ctr=1
+    print('set ctr to 1')
+
+
 ##
 tic()
 # only works for one plot - What if many are called?
@@ -72,13 +86,12 @@ if 0:
     mngr.window.setGeometry(50, 100, 640, 545)
 
 ## Matlab style plotting?
-fig=plt.figure();
+fig=plt.figure()
 plt.plot(x1,y1, '-r');
 #fig.show(block=False)
 fig.canvas.draw()
 plt.pause(0.001)
 # closefigures(plt)
-
 
 ##
 
