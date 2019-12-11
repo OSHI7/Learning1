@@ -19,21 +19,24 @@ df.tail(5)# print last few lines
 ##
 
 
+letter=df['word'].str.get(0)
 
+df['word'].get(33)
+letter # dataframe of all letters
 
+# TODO Insert the letters as a new dataframe column
 ##
 print('cell 1')
 
 
 ##
+df.word.count()
 
 
 
 
 
-
-
-
+print(i) for i in df.['word']:
 
 
 
