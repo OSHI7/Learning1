@@ -8,15 +8,35 @@ fname='words.xlsx'
 cwd= os.getcwd() # current working directory
 
 Fname=os.path.join(cwd, fname)
+df = pd.read_excel (Fname, header=None, sheet_name='Sheet1', names=['order', 'word']) #for an earlier version of Excel, you may need to use the file extension of 'xls'
+# df.rename(columns={"Entry_Order": "col1", "Word":"verd"}) # Must be a dictionary
+df=df.sort_values('word') # Sort in descending order
+df.head(5) # print first few lines
+df.tail(5)# print last few lines
 
 
 
-# # pd.
-# # print('done')Q
+##
+
+
+
 
 ##
 print('cell 1')
 
 
 ##
-print('cell2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
