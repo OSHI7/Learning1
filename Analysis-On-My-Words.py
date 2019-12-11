@@ -1,5 +1,6 @@
 
 import pandas as pd
+from pandas import DataFrame
 # 'pip install nb2xls ' - EXCEL reference; https://towardsdatascience.com/jupyter-is-the-new-excel-but-not-for-your-boss-d24340ebf314
 import os
 import matplotlib.pyplot as plt
@@ -21,17 +22,36 @@ df.head(5) # print first few lines
 df.tail(5)# print last few lines
 
 #df['firstLetter'] = df['word'].astype(str).str[0] # AStype to COERCE to a string
-df['firstLetter'] = df['word'].str[0] # Create new column with the first letter from the 'word' column
-df2=df['firstLetter'].value_counts() # Returns a series
+df2['firstLetter'] = df['word'].str[0] # Create new column with the first letter from the 'word' column
 
-df2=df2.sort_index() # sorted list of letters returned as a series.
-df2['numbers']
+
+# Using counts function that will analyze the occurrene of given letters - will return a Series
+df2=df2['firstLetter'].value_counts() # Returns a series
+df2=df2.sort_index() # sorted list of letters...still a seris
+df3=DataFrame(df2) #, columns=['letters'])  # Change our new series into a dataframe to access methods
+
+df3['index_col'] = range(1, len(df3) + 1) #Create index column with enumerated rows - name it 'index_col'
+df3['Letters']=df3.index # copy the letters to a unique column
+df3.index=df3['index_col'] # set index_column to be the indes
+
+df3 = df3.drop('index_col', 1)  # where 1 is the axis number (0 for rows and 1 for columns.)
+df3=df3.rename(columns={'word':'counts'})
+
+# %df = DataFrame(Data,columns=['Unemployment_Rate','Stock_Index_Price'])
+# df2['numbers']
+
 
 ## Figure
-df2.plot(x ='index', y='Stock_Index_Price', kind = 'scatter')
+df3.plot(x =df3.index.values, y='counts', kind = 'scatter')
+x=df3.index.values
+y=df3['counts'].values
 
-##
-df2 = DataFrame(Data,columns=['Unemployment_Rate','Stock_Index_Price'])
+plt.plot(x,y)
+plt.xticks( df3['Letters'], df3.index.values )
+plt.show()
+
+## Make a dataframe out of a series
+
 ##
 
 
