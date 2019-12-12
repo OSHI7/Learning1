@@ -30,4 +30,6 @@ def closefigures(plt):
 
 
 def keyboard():
+    ## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
+    # Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
     IPython.embed(header='WELCOME, keyboard() (exit to go back)')

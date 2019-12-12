@@ -1,10 +1,17 @@
 
+from matlablib import *
 import pandas as pd
 from pandas import DataFrame
 # 'pip install nb2xls ' - EXCEL reference; https://towardsdatascience.com/jupyter-is-the-new-excel-but-not-for-your-boss-d24340ebf314
 import os
 import matplotlib.pyplot as plt
 import sys
+
+##
+# TODO
+# - ALT+4, CTRL+W to close current window
+# - CTRL+W is currently expand,
+# - CTRL+D jump to definition (Currently CTRL+B)
 
 ##
 fname='words.xlsx'
@@ -43,6 +50,11 @@ df3=df3.rename(columns={'word':'counts'})
 # df2['numbers']
 
 print('Analysis complete on wordcount')
+# keyboard()
+
+keyboard()
+# raise SystemExit
+
 # sys.exit(0)
 # return(None)
 ## Figure
@@ -66,14 +78,10 @@ print('Analysis complete on wordcount')
 
 # NOTE: I had trouble ever returning from this in pycharm. IPython worked perfectly. So use this.
 
-## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
-# Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
-import IPython
 
-IPython.embed(header='WELCOME 2 drop 2 keyboard (exit to go back)')
 
-print('Left your "DROP TO KEYBOARD", and subroutine kept running')
-print('Note that variables edited in iPython cursor are not modified now that Im back to the namespace')
+
+
 ## other notes
 # ## Make a dataframe out of a series
 #
