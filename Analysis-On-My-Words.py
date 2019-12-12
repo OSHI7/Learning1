@@ -4,6 +4,7 @@ from pandas import DataFrame
 # 'pip install nb2xls ' - EXCEL reference; https://towardsdatascience.com/jupyter-is-the-new-excel-but-not-for-your-boss-d24340ebf314
 import os
 import matplotlib.pyplot as plt
+import sys
 
 ##
 fname='words.xlsx'
@@ -22,11 +23,11 @@ df.head(5) # print first few lines
 df.tail(5)# print last few lines
 
 #df['firstLetter'] = df['word'].astype(str).str[0] # AStype to COERCE to a string
-df2['firstLetter'] = df['word'].str[0] # Create new column with the first letter from the 'word' column
+df['firstLetter'] = df['word'].str[0] # Create new column with the first letter from the 'word' column
 
 
 # Using counts function that will analyze the occurrene of given letters - will return a Series
-df2=df2['firstLetter'].value_counts() # Returns a series
+df2=df['firstLetter'].value_counts() # Returns a series
 df2=df2.sort_index() # sorted list of letters...still a seris
 df3=DataFrame(df2) #, columns=['letters'])  # Change our new series into a dataframe to access methods
 
@@ -34,53 +35,77 @@ df3['index_col'] = range(1, len(df3) + 1) #Create index column with enumerated r
 df3['Letters']=df3.index # copy the letters to a unique column
 df3.index=df3['index_col'] # set index_column to be the indes
 
+
 df3 = df3.drop('index_col', 1)  # where 1 is the axis number (0 for rows and 1 for columns.)
 df3=df3.rename(columns={'word':'counts'})
 
 # %df = DataFrame(Data,columns=['Unemployment_Rate','Stock_Index_Price'])
 # df2['numbers']
 
-
+print('Analysis complete on wordcount')
+# sys.exit(0)
+# return(None)
 ## Figure
-df3.plot(x =df3.index.values, y='counts', kind = 'scatter')
-x=df3.index.values
-y=df3['counts'].values
+# df3.plot(x =df3.index.values, y='counts', kind = 'scatter')
+# x=df3.index.values
+# y=df3['counts'].values
+#
+# plt.plot(x,y)
+# plt.xticks( df3['Letters'], df3.index.values )
+# plt.show()
 
-plt.plot(x,y)
-plt.xticks( df3['Letters'], df3.index.values )
-plt.show()
+## DROP TO KEYBOARD, ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
+# ref: https://thepythonguru.com/python-builtin-functions/locals/ (VERY INTERSTING
+# https://www.digitalocean.com/community/tutorials/how-to-debug-python-with-an-interactive-console  <--  INTERSTIN
 
-## Make a dataframe out of a series
+# import code
+# print('code.interact started')
+# #code.interact(local=locals())
+# code.interact(banner='WELCOME, CTRL+Z to return', readfunc=None, local=locals(), exitmsg='..now returning to script')
+# print('returned from code.interact!')  # Not sure how to quit the code interact secssion
 
-##
+# NOTE: I had trouble ever returning from this in pycharm. IPython worked perfectly. So use this.
 
+## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
+# Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
+import IPython
 
-letter=df['word'].str.get(0)
+IPython.embed(header='WELCOME 2 drop 2 keyboard (exit to go back)')
 
-df['word'].get(33)
-letter # dataframe of all letters
-
-# TODO Insert the letters as a new dataframe column
-
-##
-print('cell 1')
-df2=df['firstLetter'].value_counts()
-
-##
-df.word.count()
-wordlist=df.word.values
-
-capitalize(word) for word in wordlist:
-    print(word)
-
-# [x] for word in wordlist
-
-x = [i for i in range(10)] # list comprehension to return a list
-
-## Generalized capitals
-capitalizedWords=[str.capitalize((word)) for word in wordlist] # This is a list
-capitalizedWords.sort() # in-place modification
-
-# TOTO: would have been cool to do this in place inside the pandas object
+print('Left your "DROP TO KEYBOARD", and subroutine kept running')
+print('Note that variables edited in iPython cursor are not modified now that Im back to the namespace')
+## other notes
+# ## Make a dataframe out of a series
+#
+# ##
+#
+#
+# letter=df['word'].str.get(0)
+#
+# df['word'].get(33)
+# letter # dataframe of all letters
+#
+# # TODO Insert the letters as a new dataframe column
+#
+# ##
+# print('cell 1')
+# df2=df['firstLetter'].value_counts()
+#
+# ##
+# df.word.count()
+# wordlist=df.word.values
+#
+# capitalize(word) for word in wordlist:
+#     print(word)
+#
+# # [x] for word in wordlist
+#
+# x = [i for i in range(10)] # list comprehension to return a list
+#
+# ## Generalized capitals
+# capitalizedWords=[str.capitalize((word)) for word in wordlist] # This is a list
+# capitalizedWords.sort() # in-place modification
+#
+# # TOTO: would have been cool to do this in place inside the pandas object
 
 

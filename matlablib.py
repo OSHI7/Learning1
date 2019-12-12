@@ -1,5 +1,5 @@
 import time
-
+import IPython
 
 # ref: https://stackoverflow.com/questions/5849800/what-is-the-python-equivalent-of-matlabs-tic-and-toc-functions
 def TicTocGenerator():
@@ -14,6 +14,7 @@ def TicTocGenerator():
 TicToc = TicTocGenerator() # create an instance of the TicTocGen generator
 
 # This will be the main function through which we define both tic() and toc()
+
 def toc(tempBool=True):
     # Prints the time difference yielded by generator instance TicToc
     tempTimeInterval = next(TicToc)
@@ -26,3 +27,7 @@ def tic():
 
 def closefigures(plt):
     a=[plt.close(x) for x in range(1,100)] #bit dumb..how can i cound total # of figures?
+
+
+def keyboard():
+    IPython.embed(header='WELCOME, keyboard() (exit to go back)')
