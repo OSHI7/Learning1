@@ -50,13 +50,16 @@ df3=df3.rename(columns={'word':'counts'})
 # df2['numbers']
 
 print('Analysis complete on wordcount')
-# keyboard()
 
-keyboard()
-# raise SystemExit
 
-# sys.exit(0)
-# return(None)
+for i, word in enumerate(df['word']):
+    my_string=f'{i}, {word}'
+    print(my_string)
+
+# keyboard()           # drop to console in this sesstion
+# sys.exit(0)         # Really terminate the python console
+
+
 ## Figure
 # df3.plot(x =df3.index.values, y='counts', kind = 'scatter')
 # x=df3.index.values
@@ -77,7 +80,6 @@ keyboard()
 # print('returned from code.interact!')  # Not sure how to quit the code interact secssion
 
 # NOTE: I had trouble ever returning from this in pycharm. IPython worked perfectly. So use this.
-
 
 
 
