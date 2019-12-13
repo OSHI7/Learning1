@@ -29,6 +29,9 @@ def closefigures(plt):
     a=[plt.close(x) for x in range(1,100)] #bit dumb..how can i cound total # of figures?
 
 
+def cc():
+    closefigures(plt)
+
 def keyboard():
     ## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
     # Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
