@@ -65,6 +65,11 @@ plt.legend()
 
 toc()
 
+
+def HiddenMethod():
+    print('you found me')
+
+
 #plt.show()
 plt.show(block = False)
 ##
@@ -92,9 +97,3 @@ plt.plot(x1,y1, '-r');
 fig.canvas.draw()
 plt.pause(0.001)
 # closefigures(plt)
-
-##
-
-
-##
-matplotlib.pyplot.close("all")

@@ -16,3 +16,5 @@
     1. And then set kb shortcut to this macro.
 * [Jupyter is the new Excel](https://towardsdatascience.com/jupyter-is-the-new-excel-but-not-for-your-boss-d24340ebf314)
     * notebook 2 excel
+* [IPython default scripts at startup](https://ipython.org/ipython-doc/1/config/overview.html)    
+* How to return named Couple? (function that returns many items)

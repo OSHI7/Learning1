@@ -2,8 +2,6 @@ import time
 import IPython
 
 
-
-
 # ref: https://stackoverflow.com/questions/5849800/what-is-the-python-equivalent-of-matlabs-tic-and-toc-functions
 def TicTocGenerator():
     # Generator that returns time differences
@@ -32,9 +30,6 @@ def closefigures(plt):
     a=[plt.close(x) for x in range(1,100)] #bit dumb..how can i cound total # of figures?
 
 
-def reload(module):
-    import importlib
-    importlib.reload(module)
 
 def cc():
     import matplotlib.pyplot

@@ -1,6 +1,3 @@
-
-assert(False)
-
 from matlablib import *
 import pandas as pd
 from pandas import DataFrame
@@ -56,13 +53,13 @@ df3=df3.rename(columns={'word':'counts'})
 
 print('Analysis complete on wordcount')
 # raise(1)
-assert(False)
+# assert(False)
 # raise KeyboardInterrupt()
 # quit_early()
 # dfasf
-raise StopExecution()
+# raise StopExecution()
 
-
+print('here are some new words')
 
 for i, word in enumerate(df['word']):
     my_string=f'{i}, {word}'
