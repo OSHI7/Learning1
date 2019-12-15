@@ -1,4 +1,6 @@
 
+assert(False)
+
 from matlablib import *
 import pandas as pd
 from pandas import DataFrame
@@ -49,7 +51,17 @@ df3=df3.rename(columns={'word':'counts'})
 # %df = DataFrame(Data,columns=['Unemployment_Rate','Stock_Index_Price'])
 # df2['numbers']
 
+# quit_early() # Drop to keyboard idea
+
+
 print('Analysis complete on wordcount')
+# raise(1)
+assert(False)
+# raise KeyboardInterrupt()
+# quit_early()
+# dfasf
+raise StopExecution()
+
 
 
 for i, word in enumerate(df['word']):
@@ -119,3 +131,13 @@ for i, word in enumerate(df['word']):
 # # TOTO: would have been cool to do this in place inside the pandas object
 
 
+if 0:
+    import sys, traceback, os
+
+
+    def pkill(process_name):
+        try:
+            killed = os.system('tskill ' + process_name)
+        except (Exception, e):
+            killed = 0
+        return killed

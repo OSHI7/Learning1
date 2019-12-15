@@ -96,3 +96,5 @@ plt.pause(0.001)
 ##
 
 
+##
+matplotlib.pyplot.close("all")
