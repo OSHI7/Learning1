@@ -21,4 +21,5 @@
 * What is git blame? cherry picking?
 * how does string-add-in work?
 * [embed() details](https://ipython.readthedocs.io/en/stable/interactive/reference.html#embedding-ipython)
-* [IPYTHON detils](https://ipython.readthedocs.io/en/stable/interactive/reference.html#embedding-ipython) 
+* [IPYTHON detils](https://ipython.readthedocs.io/en/stable/interactive/reference.html#embedding-ipython)
+* multi-file module (like matlablib), [ref1](https://stackoverflow.com/questions/16425434/how-to-create-a-python-package-with-multiple-files-without-subpackages), [for import *](https://docs.python.org/2/tutorial/modules.html#importing-from-a-package) 
