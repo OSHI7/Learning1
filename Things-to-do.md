@@ -18,3 +18,5 @@
     * notebook 2 excel
 * [IPython default scripts at startup](https://ipython.org/ipython-doc/1/config/overview.html)    
 * How to return named Couple? (function that returns many items)
+* What is git blame? cherry picking?
+* how does string-add-in work?

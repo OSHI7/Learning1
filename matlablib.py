@@ -1,5 +1,10 @@
+import pandas as pd
+from pandas import DataFrame
+import matplotlib.pyplot as plt
 import time
 import IPython
+from IPython import embed
+
 
 
 # ref: https://stackoverflow.com/questions/5849800/what-is-the-python-equivalent-of-matlabs-tic-and-toc-functions
@@ -45,23 +50,16 @@ def cc():
 def keyboard():
     ## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
     # Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
-    IPython.embed(header='WELCOME, keyboard() (exit to go back)')
+
+    embed()
+    #IPython.embed(header='WELCOME, keyboard() (exit to go back)',local_ns=locals(), global_ns=locals())
+    #sys.tracebacklimit = 0
+
+
+
 
 def quit_early():
     raise Exception('Halt', 'drop to keyboard')
-
-class StopExecution(Exception):
-    import sys
-    #sys.tracebacklimit = 0 # ref: https://stackoverflow.com/questions/28413104/stop-python-script-without-killing-the-python-process
-    def __init(self):
-        pass
-    def __str__(self):
-        return ''
-
-    def _render_traceback_(self):
-        pass
-
-    import sys, traceback, os
 
 def kill_background():
     # Kill python background tasks if gets hung up in pycharm
@@ -71,5 +69,28 @@ def kill_background():
 def kill():
     kill_background()
 
+class MyError(Exception):  # https://stackoverflow.com/questions/1319615/proper-way-to-declare-custom-exceptions-in-modern-python
+    def __init__(self):
+        # self.message = message
+        # self.animal = animal
+        pass
 
+    def __str__(self):
+        return self.message
 
+    def _render_traceback_(self):
+        print('ya got me')
+    def __repr__(self):
+        print('repr1')
+
+# NO IDEA ABOUT THIS
+# def showtraceback(self):
+#     traceback_lines = traceback.format_exception(*sys.exc_info())
+#     del traceback_lines[1]
+#     message = ''.join(traceback_lines)
+#     sys.stderr.write(message)
+#
+# import sys
+# import traceback
+# import IPython
+# IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback

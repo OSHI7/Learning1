@@ -1,10 +1,13 @@
+
 from matlablib import *
-import pandas as pd
-from pandas import DataFrame
+from foo import *
+
 # 'pip install nb2xls ' - EXCEL reference; https://towardsdatascience.com/jupyter-is-the-new-excel-but-not-for-your-boss-d24340ebf314
 import os
-import matplotlib.pyplot as plt
 import sys
+
+
+# raise Exception
 
 ##
 # TODO
@@ -51,6 +54,7 @@ df3=df3.rename(columns={'word':'counts'})
 # quit_early() # Drop to keyboard idea
 
 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=  TRY TO KICK OUT
 print('Analysis complete on wordcount')
 # raise(1)
 # assert(False)
@@ -58,6 +62,20 @@ print('Analysis complete on wordcount')
 # quit_early()
 # dfasf
 # raise StopExecution()
+
+# IPython.embed(header='WELCOME, keyboard() (exit to go back)',local_ns=locals())
+# from IPython import embed
+# embed()
+# IPython.start_ipython()
+
+embed()
+
+# sys.tracebacklimit = 3
+# raise ValueError(23)
+
+import sys
+# sys.excepthook = exception_handler
+# %sys.excepthook=sys.__excepthook__
 
 print('here are some new words')
 

@@ -1,3 +1,5 @@
+
+
 def some_function():
     return 43
 
@@ -9,3 +11,8 @@ def echoMyString(yourstring: str) -> int:  # Type hinting!
 
 def greeting(name: str) -> str:
     return 'Hello ' + name
+
+for x in range(10):
+    # print(x)
+    pass
+
