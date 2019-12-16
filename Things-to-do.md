@@ -20,3 +20,5 @@
 * How to return named Couple? (function that returns many items)
 * What is git blame? cherry picking?
 * how does string-add-in work?
+* [embed() details](https://ipython.readthedocs.io/en/stable/interactive/reference.html#embedding-ipython)
+* [IPYTHON detils](https://ipython.readthedocs.io/en/stable/interactive/reference.html#embedding-ipython) 
