@@ -48,35 +48,18 @@ df3.index=df3['index_col'] # set index_column to be the indes
 df3 = df3.drop('index_col', 1)  # where 1 is the axis number (0 for rows and 1 for columns.)
 df3=df3.rename(columns={'word':'counts'})
 
-# %df = DataFrame(Data,columns=['Unemployment_Rate','Stock_Index_Price'])
-# df2['numbers']
+# Alias function, ref=https://stackoverflow.com/questions/48217149/python-how-do-i-alias-a-function-with-specific-parameters
+from functools import partial
+keyboard = partial(embed)
 
-# quit_early() # Drop to keyboard idea
 
-
+##
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=  TRY TO KICK OUT
 print('Analysis complete on wordcount')
-# raise(1)
-# assert(False)
-# raise KeyboardInterrupt()
-# quit_early()
-# dfasf
-# raise StopExecution()
+b=embed(header='exit() to return')
 
-# IPython.embed(header='WELCOME, keyboard() (exit to go back)',local_ns=locals())
-# from IPython import embed
-# embed()
-# IPython.start_ipython()
 
-embed()
-
-# sys.tracebacklimit = 3
-# raise ValueError(23)
-
-import sys
-# sys.excepthook = exception_handler
-# %sys.excepthook=sys.__excepthook__
-
+## DONE!
 print('here are some new words')
 
 for i, word in enumerate(df['word']):
@@ -84,7 +67,7 @@ for i, word in enumerate(df['word']):
     print(my_string)
 
 # keyboard()           # drop to console in this sesstion
-# sys.exit(0)         # Really terminate the python console
+
 
 
 ## Figure

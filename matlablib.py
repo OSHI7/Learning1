@@ -44,7 +44,8 @@ def cc():
     matplotlib.pyplot.close("all")
 
     #IPython.get_ipython().run_line_magic('reset', " -f in") # ref: https://ipython.readthedocs.io/en/stable/interactive/magics.html
-    ip.run_line_magic('reset', " -f in") # short form works
+    #ip.run_line_magic('reset', " -f in") # short form works
+    ip.run_line_magic('reset', " -f ")  # short form works
 
 
 def keyboard():
