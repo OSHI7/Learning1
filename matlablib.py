@@ -6,6 +6,8 @@ import IPython
 from IPython import embed
 
 
+# learn where site packages are stored! ref: https://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory
+# python -c "import site; print(site.getsitepackages())"
 
 # ref: https://stackoverflow.com/questions/5849800/what-is-the-python-equivalent-of-matlabs-tic-and-toc-functions
 def TicTocGenerator():
@@ -45,7 +47,7 @@ def cc():
 
     #IPython.get_ipython().run_line_magic('reset', " -f in") # ref: https://ipython.readthedocs.io/en/stable/interactive/magics.html
     #ip.run_line_magic('reset', " -f in") # short form works
-    ip.run_line_magic('reset', " -f ")  # short form works
+    ip.run_line_magic('reset', '-f ')  # short form works
 
 
 def keyboard():
@@ -95,3 +97,8 @@ class MyError(Exception):  # https://stackoverflow.com/questions/1319615/proper-
 # import traceback
 # import IPython
 # IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+
+def getPythonVarables():
+    import os
+    print(os.environ)  # Print a dict of env vars and their values
+    # os.environ["PYTHONPATH"]  # Query a specific env var

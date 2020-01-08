@@ -19,6 +19,7 @@ import sys
 fname='words.xlsx'
 cwd= os.getcwd() # current working directory
 
+
 Fname=os.path.join(cwd, fname)
 df = pd.read_excel (Fname, header=None, sheet_name='Sheet1', names=['order', 'word']) #for an earlier version of Excel, you may need to use the file extension of 'xls'
 # df.rename(columns={"Entry_Order": "col1", "Word":"verd"}) # Must be a dictionary
@@ -49,14 +50,14 @@ df3 = df3.drop('index_col', 1)  # where 1 is the axis number (0 for rows and 1 f
 df3=df3.rename(columns={'word':'counts'})
 
 # Alias function, ref=https://stackoverflow.com/questions/48217149/python-how-do-i-alias-a-function-with-specific-parameters
-from functools import partial
-keyboard = partial(embed)
+# from functools import partial
+# keyboard = partial(embed)
 
 
 ##
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=  TRY TO KICK OUT
 print('Analysis complete on wordcount')
-b=embed(header='exit() to return')
+# b=embed(header='exit() to return')
 
 
 ## DONE!
@@ -139,3 +140,6 @@ if 0:
         except (Exception, e):
             killed = 0
         return killed
+
+
+# THM 7999

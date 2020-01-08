@@ -16,6 +16,7 @@ pd2=pd.read_csv(fname_2)
 print('loaded')
 toc()
 
+# %%
 ## Check if all variables are cleared?
 # SETTINGS > BUILD,EXECUTION,DEPLOYMENT > CONSOLE > "Use existing console for "Run with Python Console"'
 # Idea;  if that setting re-initializes all variables, or if it continues with the same namespace
@@ -68,7 +69,7 @@ toc()
 
 def HiddenMethod():
     print('you found me')
-
+# %%
 
 #plt.show()
 plt.show(block = False)
