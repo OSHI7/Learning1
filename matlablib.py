@@ -49,6 +49,8 @@ def cc():
     #ip.run_line_magic('reset', " -f in") # short form works
     ip.run_line_magic('reset', '-f ')  # short form works
 
+def add3nums(a, b, c):
+    return (a+b+c)
 
 def keyboard():
     ## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
