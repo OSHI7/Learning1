@@ -35,6 +35,11 @@ df.tail(5)# print last few lines
 #df['firstLetter'] = df['word'].astype(str).str[0] # AStype to COERCE to a string
 df['firstLetter'] = df['word'].str[0] # Create new column with the first letter from the 'word' column
 
+# *********
+print('now dropping to embed *********************************************************')
+embed(header='type quit() to quit')
+print('now resuming from embed')
+#
 
 # Using counts function that will analyze the occurrene of given letters - will return a Series
 df2=df['firstLetter'].value_counts() # Returns a series
@@ -93,6 +98,8 @@ for i, word in enumerate(df['word']):
 # NOTE: I had trouble ever returning from this in pycharm. IPython worked perfectly. So use this.
 
 
+"""this is a set
+of comments """
 
 
 ## other notes

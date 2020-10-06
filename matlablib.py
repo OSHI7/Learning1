@@ -36,7 +36,33 @@ def tic():
 def closefigures(plt):
     a=[plt.close(x) for x in range(1,100)] #bit dumb..how can i cound total # of figures?
 
+def quittin_early():  # TODO: add to matlablib
+    ''' can drop to the python console without barfing a bunch of errors
+        preserves the namespace, and you can resume the script the way it
+        was running before
+        ref: https://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython
 
+        nb; you could just import IPython, then call embed(), but this way I can setup any IPython magics here, which need to be
+        reloaded in this intstance.  Variables persist, but the magics do not.
+    '''
+    import IPython
+    from pkg_resources import parse_version  # installed with setuptools
+
+    if parse_version(IPython.release.version) >= parse_version('4.0.0'):
+        from traitlets.config import Config
+    else:
+        import IPython.config
+        from IPython.config import Config
+
+    c = Config()
+    c.InteractiveShellApp.exec_lines = [
+        "%load_ext autoreload",
+        "%autoreload 2",
+        "print('quittin early')"
+    ]
+    IPython.start_ipython(config=c)
+    # known issue: In [10]: ERROR! Session/line number was not unique in database. History logging moved to new session 202
+    # just disregard - only the history that is messed up
 
 def cc():
     import matplotlib.pyplot
@@ -52,6 +78,12 @@ def cc():
 def add3nums(a, b, c):
     return (a+b+c)
 
+def quit_early():
+    raise Exception('Halt', 'drop to keyboard')
+
+
+
+
 def keyboard():
     ## DROP TO KEYBOARD in the middle of a script. If you have iPYTHON SETUP can do this.
     # Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
@@ -59,12 +91,6 @@ def keyboard():
     embed()
     #IPython.embed(header='WELCOME, keyboard() (exit to go back)',local_ns=locals(), global_ns=locals())
     #sys.tracebacklimit = 0
-
-
-
-
-def quit_early():
-    raise Exception('Halt', 'drop to keyboard')
 
 def kill_background():
     # Kill python background tasks if gets hung up in pycharm
@@ -85,6 +111,7 @@ class MyError(Exception):  # https://stackoverflow.com/questions/1319615/proper-
 
     def _render_traceback_(self):
         print('ya got me')
+
     def __repr__(self):
         print('repr1')
 

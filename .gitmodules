@@ -1,0 +1,3 @@
+[submodule "ten-tips-for-pythonic-code-jetbrains-webcast"]
+	path = ten-tips-for-pythonic-code-jetbrains-webcast
+	url = https://github.com/mikeckennedy/ten-tips-for-pythonic-code-jetbrains-webcast.git
