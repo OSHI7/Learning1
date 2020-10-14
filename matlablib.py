@@ -12,14 +12,16 @@ from IPython import embed
 # ref: https://stackoverflow.com/questions/5849800/what-is-the-python-equivalent-of-matlabs-tic-and-toc-functions
 def TicTocGenerator():
     # Generator that returns time differences
-    ti = 0           # initial time
-    tf = time.time() # final time
+    ti = 0  # initial time
+    tf = time.time()  # final time
     while True:
         ti = tf
         tf = time.time()
-        yield tf-ti # returns the time difference
+        yield tf - ti  # returns the time difference
 
-TicToc = TicTocGenerator() # create an instance of the TicTocGen generator
+
+TicToc = TicTocGenerator()  # create an instance of the TicTocGen generator
+
 
 # This will be the main function through which we define both tic() and toc()
 
@@ -27,14 +29,17 @@ def toc(tempBool=True):
     # Prints the time difference yielded by generator instance TicToc
     tempTimeInterval = next(TicToc)
     if tempBool:
-        print( "Elapsed time: %f seconds.\n" %tempTimeInterval )
+        print("Elapsed time: %f seconds.\n" % tempTimeInterval)
+
 
 def tic():
     # Records a time in TicToc, marks the beginning of a time interval
     toc(False)
 
+
 def closefigures(plt):
-    a=[plt.close(x) for x in range(1,100)] #bit dumb..how can i cound total # of figures?
+    a = [plt.close(x) for x in range(1, 100)]  # bit dumb..how can i cound total # of figures?
+
 
 def quittin_early():  # TODO: add to matlablib
     ''' can drop to the python console without barfing a bunch of errors
@@ -64,6 +69,7 @@ def quittin_early():  # TODO: add to matlablib
     # known issue: In [10]: ERROR! Session/line number was not unique in database. History logging moved to new session 202
     # just disregard - only the history that is messed up
 
+
 def cc():
     import matplotlib.pyplot
     from IPython.testing.globalipapp import get_ipython  # https://pmbaumgartner.github.io/blog/testing-ipython-magics/
@@ -71,17 +77,17 @@ def cc():
 
     matplotlib.pyplot.close("all")
 
-    #IPython.get_ipython().run_line_magic('reset', " -f in") # ref: https://ipython.readthedocs.io/en/stable/interactive/magics.html
-    #ip.run_line_magic('reset', " -f in") # short form works
+    # IPython.get_ipython().run_line_magic('reset', " -f in") # ref: https://ipython.readthedocs.io/en/stable/interactive/magics.html
+    # ip.run_line_magic('reset', " -f in") # short form works
     ip.run_line_magic('reset', '-f ')  # short form works
 
+
 def add3nums(a, b, c):
-    return (a+b+c)
+    return (a + b + c)
+
 
 def quit_early():
     raise Exception('Halt', 'drop to keyboard')
-
-
 
 
 def keyboard():
@@ -89,18 +95,26 @@ def keyboard():
     # Ref: https://stackoverflow.com/questions/2158097/drop-into-python-interpreter-while-executing-function
 
     embed()
-    #IPython.embed(header='WELCOME, keyboard() (exit to go back)',local_ns=locals(), global_ns=locals())
-    #sys.tracebacklimit = 0
+    # IPython.embed(header='WELCOME, keyboard() (exit to go back)',local_ns=locals(), global_ns=locals())
+    # sys.tracebacklimit = 0
+
 
 def kill_background():
     # Kill python background tasks if gets hung up in pycharm
     import os
     os.system('tskill python')
 
+
 def kill():
     kill_background()
 
-class MyError(Exception):  # https://stackoverflow.com/questions/1319615/proper-way-to-declare-custom-exceptions-in-modern-python
+
+def SayHey():
+    print('hey')
+
+
+class MyError(
+    Exception):  # https://stackoverflow.com/questions/1319615/proper-way-to-declare-custom-exceptions-in-modern-python
     def __init__(self):
         # self.message = message
         # self.animal = animal
@@ -114,6 +128,7 @@ class MyError(Exception):  # https://stackoverflow.com/questions/1319615/proper-
 
     def __repr__(self):
         print('repr1')
+
 
 # NO IDEA ABOUT THIS
 # def showtraceback(self):
