@@ -41,7 +41,7 @@ print(a)
 # Above prints [0,1,2,3], just the enumerated items
 
 a=[]
-a=[i for i in enumerate(items)]
+a=[i for i in (items)]
 print(a) # prints the entire dictionary
 
 a=[]

@@ -36,10 +36,10 @@ df.tail(5)# print last few lines
 df['firstLetter'] = df['word'].str[0] # Create new column with the first letter from the 'word' column
 
 # *********
-print('now dropping to embed *********************************************************')
+"""print('now dropping to embed *********************************************************')
 embed(header='type quit() to quit')
 print('now resuming from embed')
-#
+"""#
 
 # Using counts function that will analyze the occurrene of given letters - will return a Series
 df2=df['firstLetter'].value_counts() # Returns a series
@@ -65,7 +65,8 @@ print('Analysis complete on wordcount')
 # b=embed(header='exit() to return')
 
 
-## DONE!
+
+#%% DONE!
 print('here are some new words')
 
 for i, word in enumerate(df['word']):
@@ -74,7 +75,7 @@ for i, word in enumerate(df['word']):
 
 # keyboard()           # drop to console in this sesstion
 
-
+#%%
 
 ## Figure
 # df3.plot(x =df3.index.values, y='counts', kind = 'scatter')

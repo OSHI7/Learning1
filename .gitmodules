@@ -1,3 +1,6 @@
 [submodule "ten-tips-for-pythonic-code-jetbrains-webcast"]
 	path = ten-tips-for-pythonic-code-jetbrains-webcast
 	url = https://github.com/mikeckennedy/ten-tips-for-pythonic-code-jetbrains-webcast.git
+[submodule "GUI stuff/gitAudioSpectrum"]
+	path = GUI stuff/gitAudioSpectrum
+	url = https://github.com/markjay4k/Audio-Spectrum-Analyzer-in-Python.git
