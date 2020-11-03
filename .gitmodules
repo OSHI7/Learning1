@@ -4,3 +4,9 @@
 [submodule "GUI stuff/gitAudioSpectrum"]
 	path = GUI stuff/gitAudioSpectrum
 	url = https://github.com/markjay4k/Audio-Spectrum-Analyzer-in-Python.git
+[submodule "provingground"]
+	path = provingground
+	url = https://cosgit1.ds.jdsu.net/scm/sat/provingground.git
+[submodule "viavi-shared"]
+	path = viavi-shared
+	url = https://cosgit1.ds.jdsu.net/scm/sat/viavi-shared.git

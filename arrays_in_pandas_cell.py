@@ -15,15 +15,19 @@ import matplotlib
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+#%% this is a  new cell
+print('celly1')
+
+
 #%% bonus: Demo for 3 ways how to build an array in a loop
 
-# Use built-in
+#%% Use built-in
 array=[]
 for i in range(0,10):
     array.append(i)
 # print(array)
 
-# Assign/append next element using "+="
+#%% Assign/append next element using "+="
 array=[]
 for i in range(0,10):
     array+=[i]
