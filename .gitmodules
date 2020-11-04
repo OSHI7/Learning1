@@ -10,3 +10,6 @@
 [submodule "viavi-shared"]
 	path = viavi-shared
 	url = https://cosgit1.ds.jdsu.net/scm/sat/viavi-shared.git
+[submodule "viavi-pycassette-drivers"]
+	path = viavi-pycassette-drivers
+	url = https://cosgit1.ds.jdsu.net/scm/sat/viavi-pycassette-drivers.git

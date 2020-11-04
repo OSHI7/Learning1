@@ -15,11 +15,17 @@ plt.xlabel('X')
 plt.ylabel('Y')
 
 filename='D:\\works\\GitHub\\Learning1\\MYPLOT.png'
+filename='D:\\Works\\Python\\Learning1\\MYPLOT.png'
 plt.savefig(filename)
 print('saved')
 
 #sendMail(["philipson00@gmail.com"], "subject", "text", ["D:\\User\\joshua\\My Pictures\\Samurai_with_sword.jpg"])
-sendMail(["philipson00@gmail.com"], "subject", "text", [filename])
+
+smtpUser = '@gmail.com'
+smtpPass = ''
+plt.ion()
+
+sendMail(["philipson00@gmail.com"], "subject", "text", [filename], smtpUser=smtpUser, smtpPass=smtpPass)
 print('sent')
 
 plt.show()
