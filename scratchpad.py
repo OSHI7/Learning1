@@ -29,5 +29,3 @@ try:
 except ImportError:
     from distutils.core import setup
 
-import lazyxml
-import pyOTDR
