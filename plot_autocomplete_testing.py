@@ -1,7 +1,8 @@
 #%%
 
+# Causes pop-out graphics
 import matplotlib
-matplotlib.use('Qt5Agg')
+matplotlib.use('Qt5Agg') 
 
 import matplotlib.pyplot as plt 
 
@@ -12,5 +13,7 @@ import matplotlib.pyplot as plt
 figure,ax = plt.subplots()
 
 ax.set_title('host')
+ax.set_ylabel('hiffas')
+ax.tight_layout()
 
 # %%

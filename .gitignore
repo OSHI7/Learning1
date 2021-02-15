@@ -9,8 +9,9 @@
 /VoipMS_Logfile - Copy.csv
 /__pycache__/*.pyc
 /MYPLOT.png
-/venv
+venv
 /__pycache__
 /.idea
 /lazyxml.egg-info/
 /pyxml/
+/.vscode/
