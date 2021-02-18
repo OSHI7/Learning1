@@ -1,19 +1,20 @@
-#%%
+# %%
 
 # Causes pop-out graphics
 import matplotlib
-matplotlib.use('Qt5Agg') 
 
-import matplotlib.pyplot as plt 
+matplotlib.use("Qt5Agg")
 
-#plt.switch_backend('QtAgg4')
+import matplotlib.pyplot as plt
 
-#get_ipython().run_line_magic('matplotlib', 'inline')
-#%% 
-figure,ax = plt.subplots()
+# plt.switch_backend('QtAgg4')
 
-ax.set_title('host')
-ax.set_ylabel('hiffas')
-ax.tight_layout()
+# get_ipython().run_line_magic('matplotlib', 'inline')
+# %%
+figure, ax = plt.subplots()
+
+ax.set_title("host")
+ax.set_ylabel("hiffas")
+plt.tight_layout()
 
 # %%

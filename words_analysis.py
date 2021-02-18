@@ -1,8 +1,7 @@
-# %%
+#%%
 import pandas as pd
 
-
-# %% Load
+#%% Load
 df = pd.read_csv("words.txt", delimiter="\n", names=["WORDS"])
 
 print("1")
@@ -19,18 +18,32 @@ dupes = df[df.duplicated(keep=False)]
 print("donnny")
 
 
-# %%
-for i, dupe in enumerate(dupes["WORDS"].items()):
-    print(f"{i}: {dupe}")
+#%%
+def myfunc():
+    for i, dupe in enumerate(dupes["WORDS"].items()):
+        print(f"{i}: {dupe}")
 
-# %% Unique elements
+
+myfunc()
+
+#%% Unique elements
 print("\n\n\n Now priingtin unique elements \n\n")
 uniques = df["WORDS"].unique()
 for element in uniques:
     print(f"{element}")
 
-# %%
-print("doggnney")
+#%%
+name = "SWE haydn"
+print(f"Hello, {name}")
 
+x = [    1,    2,    3,    4,    5,]
 
 # %%
+print("yer done!")
+import time
+#%%
+from datetime import datetime
+
+datetime.now().strftime("%d/%m/%Y %H:%M:%S:%f")
+
+#%%
