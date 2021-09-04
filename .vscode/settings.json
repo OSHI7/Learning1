@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "d:\\Works\\Python\\venv\\Learning1\\Scripts\\python.exe"
+    "python.pythonPath": "d:\\Works\\Python\\venv\\Learning1\\Scripts\\python.exe",
+    "editor.fontFamily": "IBM Plex Mono, Consolas, 'Courier New', monospace",
+    "editor.wordWrap": "on",
+    "workbench.editor.openPositioning": "first",
+    "search.mode": "newEditor"
 }
