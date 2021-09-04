@@ -1,8 +1,10 @@
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matlablib import *
 
+plt.ion()
 tic()
 fname_1=r"70dB-2sec.csv"
 fname_2=r'70dB-5sec.csv'
@@ -21,7 +23,8 @@ x2 = np.linspace(1, len(y2), len(y2))
 mean_2s = np.mean(y1)
 mean_5s = np.mean(y2)
 
-##
+#%%
+
 def makePlot():
     plt.figure()  # Make a new figure
     line_2s = plt.plot(x1, y1, label=("2s mean=" + str(round(mean_2s, 2))
@@ -35,6 +38,9 @@ def makePlot():
     plt.legend()
 
     toc()
-    plt.show(block=False)
+    plt.show(block=True)
 
 ##
+#%% 
+makePlot()
+

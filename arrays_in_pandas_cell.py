@@ -37,6 +37,9 @@ for i in range(0,10):
 array = [i for i in range(0,10)];
 # print(array)
 
+#%%
+
+2021-1993
 #%% CALCULATION,
 
 pd.set_option('display.max_columns', None)  # let pandas print out all the columns

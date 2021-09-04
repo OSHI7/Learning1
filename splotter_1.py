@@ -1,8 +1,13 @@
+#%%
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matlablib import *
+import matplotlib
 
+# %matplotlib inline 
+# %matplotlib notebook
 
 ## % load me file
 # %timeit
@@ -15,8 +20,8 @@ pd1=pd.read_csv(fname_1)
 pd2=pd.read_csv(fname_2)
 print('loaded')
 toc()
-
-# %%
+""" here is some text """
+#%%
 ## Check if all variables are cleared?
 # SETTINGS > BUILD,EXECUTION,DEPLOYMENT > CONSOLE > "Use existing console for "Run with Python Console"'
 # Idea;  if that setting re-initializes all variables, or if it continues with the same namespace
@@ -31,7 +36,8 @@ else:
     print('set ctr to 1')
 
 
-##
+
+#%%
 tic()
 # only works for one plot - What if many are called?
 # [plt.close(x) for x in range(1,11)]
@@ -39,7 +45,9 @@ tic()
 closefigures(plt) # call my matplotlib to kill all open figures
 # Nonense comment
 
-##
+
+
+#%%
 # [ x**2 for x in range(1,11) ]
 
 y1=pd1.RL1_1310
@@ -69,7 +77,10 @@ toc()
 
 def HiddenMethod():
     print('you found me')
-# %%
+
+
+
+#%%
 
 #plt.show()
 plt.show(block = False)
@@ -94,7 +105,7 @@ if 0:
 ## Matlab style plotting?
 fig=plt.figure()
 plt.plot(x1,y1, '-r');
-#fig.show(block=False)
+#fig.show(block=False)df
 fig.canvas.draw()
 plt.pause(0.001)
-# closefigures(plt)
+# closefigures(plt) df

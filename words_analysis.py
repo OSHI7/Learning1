@@ -2,7 +2,14 @@
 import pandas as pd
 
 #%% Load
-df = pd.read_csv("words.txt", delimiter="\n", names=["WORDS"])
+
+def load_data():
+    ''''''
+    df = pd.read_csv("words.txt", delimiter="\n", names=["WORDS"])
+    return df
+
+
+df = load_data()
 
 print("1")
 df["WORDS"] = df["WORDS"].str.strip()
@@ -22,7 +29,6 @@ print("donnny")
 def myfunc():
     for i, dupe in enumerate(dupes["WORDS"].items()):
         print(f"{i}: {dupe}")
-
 
 myfunc()
 
